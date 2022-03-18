@@ -5,6 +5,7 @@ const search = async (term) => {
     await axios.get(`https://api.tvmaze.com/search/shows?q=${term}`,)
         .then(res => {
             for (let element of res.data) {
+
                 const card = document.createElement("div")
                 card.classList.add("card",)
                 card.style.width = '400px'
